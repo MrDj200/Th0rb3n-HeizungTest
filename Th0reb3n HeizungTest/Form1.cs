@@ -35,7 +35,7 @@ namespace Th0reb3n_HeizungTest
             {
                 WebClient client = new WebClient();
                 XmlDocument doc = new XmlDocument();
-                doc.LoadXml(client.DownloadString(new Uri("{preurl}  {item.Value}")));
+                doc.LoadXml(client.DownloadString(new Uri($"{preurl}{item.Value}")));
 
                 werte.Add(item.Key, doc);
             }
